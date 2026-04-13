@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "basic_info": {
+    "id": "crackls315-segmentation",
+    "name": "CrackLS315",
+    "short_name": "crackls315-seg",
+    "description": "Segmentation packaging of CrackLS315 from DeepCrack, with pixel-level crack masks from line-array pavement imagery captured under laser illumination.",
+    "year": 2019
+  },
+  "project_context": {
+    "task": "segmentation",
+    "tasks": [
+      "segmentation"
+    ],
+    "damage_types": [
+      "crack"
+    ],
+    "task_classification": {
+      "primary_task": "segmentation",
+      "task_subtype": "semantic_segmentation"
+    },
+    "segmentation_type": "semantic_segmentation",
+    "task_subtype": "semantic_segmentation"
+  },
+  "imaging_setup": {
+    "camera": "Line-array camera",
+    "camera_viewpoint": [
+      "top-down"
+    ],
+    "resolution": "512x512",
+    "lighting_conditions": "Laser illumination",
+    "capture_height_mm": "Not reported",
+    "geotagged": false,
+    "resolution_details": [
+      {
+        "resolution": "512x512",
+        "count": 315
+      }
+    ]
+  },
+  "annotation_schema": [
+    {
+      "type": "segmentation_mask",
+      "description": "Binary crack masks paired with each CrackLS315 image",
+      "classes": [
+        {
+          "id": 1,
+          "name": "crack",
+          "description": "CrackLS315 class: crack",
+          "color": "#294F71"
+        }
+      ]
+    }
+  ],
+  "statistics": {
+    "n_images": 315,
+    "n_annotations": 940,
+    "n_images_with_annotations": 310,
+    "average_annotations_per_image": 2.984126984126984,
+    "dataset_size": "98.80 MB",
+    "dataset_size_bytes": 103595572,
+    "dataset_file_count": 630,
+    "image_format": "png_masks",
+    "class_distribution": {
+      "crack": 940
+    },
+    "split": {
+      "data": {
+        "n_images": 315,
+        "percentage": 1.0,
+        "n_images_with_annotations": 310,
+        "annotation_coverage": 0.9841,
+        "dataset_size": "98.80 MB",
+        "dataset_size_bytes": 103595572,
+        "dataset_file_count": 630
+      }
+    }
+  },
+  "geographic_coverage": {
+    "countries": [
+      {
+        "name": "China",
+        "image_count": 315,
+        "annotated_image_count": 310,
+        "annotation_coverage": 0.9841
+      }
+    ],
+    "temporal_scope": "Published 2019"
+  },
+  "quality_assurance": {
+    "annotation_quality": "Pixel-level masks distributed in the DeepCrack dataset release",
+    "inter_annotator_agreement": "Not reported",
+    "review_status": "Published research dataset"
+  },
+  "authors": [
+    {
+      "name": "Qin Zou",
+      "affiliation": "Wuhan University",
+      "role": "Dataset Creator"
+    },
+    {
+      "name": "Zheng Zhang",
+      "affiliation": "Not reported",
+      "role": "Dataset Creator"
+    },
+    {
+      "name": "Qingquan Li",
+      "affiliation": "Wuhan University",
+      "role": "Dataset Creator"
+    },
+    {
+      "name": "Xianbiao Qi",
+      "affiliation": "Not reported",
+      "role": "Dataset Creator"
+    },
+    {
+      "name": "Qian Wang",
+      "affiliation": "Not reported",
+      "role": "Dataset Creator"
+    },
+    {
+      "name": "Song Wang",
+      "affiliation": "University of South Carolina",
+      "role": "Dataset Creator"
+    }
+  ],
+  "license": "Academic research use",
+  "links": {
+    "github": "https://github.com/large-road-damage-datalake/crackls315-segmentation",
+    "download": "https://github.com/qinnzou/DeepCrack",
+    "paper": "https://ieeexplore.ieee.org/document/8517148",
+    "homepage": "https://github.com/qinnzou/DeepCrack"
+  },
+  "citation": {
+    "bibtex": "@article{zou2018deepcrack,\n  title = {Deepcrack: Learning Hierarchical Convolutional Features for Crack Detection},\n  author = {Zou, Qin and Zhang, Zheng and Li, Qingquan and Qi, Xianbiao and Wang, Qian and Wang, Song},\n  journal = {IEEE Transactions on Image Processing},\n  volume = {28},\n  number = {3},\n  pages = {1498--1512},\n  year = {2019},\n  url = {https://ieeexplore.ieee.org/document/8517148}\n}"
+  },
+  "tags": [
+    "segmentation",
+    "pavement-crack",
+    "crackls315",
+    "bmp-masks",
+    "china",
+    "top-down",
+    "laser-illumination"
+  ],
+  "source_publication": {
+    "dataset_doi": "Not provided",
+    "article_doi": "Not provided",
+    "article_title": "DeepCrack: Learning Hierarchical Convolutional Features for Crack Detection",
+    "journal": "IEEE Transactions on Image Processing",
+    "year": 2019
+  }
+}
