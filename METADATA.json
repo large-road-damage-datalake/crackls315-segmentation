@@ -20,7 +20,8 @@
       "task_subtype": "semantic_segmentation"
     },
     "segmentation_type": "semantic_segmentation",
-    "task_subtype": "semantic_segmentation"
+    "task_subtype": "semantic_segmentation",
+    "label_taxonomy_version": "road_damage_v1"
   },
   "imaging_setup": {
     "camera": "Line-array camera",
@@ -47,7 +48,9 @@
           "id": 1,
           "name": "crack",
           "description": "CrackLS315 class: crack",
-          "color": "#294F71"
+          "color": "#294F71",
+          "canonical_name": "crack",
+          "instances": 940
         }
       ]
     }
@@ -67,7 +70,7 @@
     "split": {
       "data": {
         "n_images": 315,
-        "percentage": 1.0,
+        "percentage": 1,
         "n_images_with_annotations": 310,
         "annotation_coverage": 0.9841,
         "dataset_size": "98.80 MB",
@@ -149,5 +152,31 @@
     "article_title": "DeepCrack: Learning Hierarchical Convolutional Features for Crack Detection",
     "journal": "IEEE Transactions on Image Processing",
     "year": 2019
+  },
+  "class_taxonomy": {
+    "version": "road_damage_v1",
+    "classes": [
+      {
+        "canonical_name": "crack",
+        "display_name": "Crack",
+        "damage_family": "crack",
+        "damage_subtype": "generic",
+        "role": "damage_target",
+        "is_damage_target": true,
+        "aliases": [
+          "crack",
+          "cracked"
+        ],
+        "source_labels": [
+          "crack"
+        ],
+        "taxonomy_source": "registry",
+        "taxonomy_unresolved": false
+      }
+    ],
+    "damage_types": [
+      "crack"
+    ],
+    "unresolved_labels": []
   }
 }
