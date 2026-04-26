@@ -6,7 +6,7 @@ CrackLS315 is a task-specific segmentation package derived from the DeepCrack da
 
 - Task: segmentation
 - Images: 315
-- Annotations: 940
+- Annotations: 855
 - Classes: 1 (crack)
 - Annotation format: paired bitmap masks
 

@@ -19,9 +19,9 @@
       "primary_task": "segmentation",
       "task_subtype": "semantic_segmentation"
     },
+    "label_taxonomy_version": "road_damage_v2",
     "segmentation_type": "semantic_segmentation",
-    "task_subtype": "semantic_segmentation",
-    "label_taxonomy_version": "road_damage_v1"
+    "task_subtype": "semantic_segmentation"
   },
   "imaging_setup": {
     "camera": "Line-array camera",
@@ -37,6 +37,20 @@
         "resolution": "512x512",
         "count": 315
       }
+    ],
+    "resolution_by_country": [
+      {
+        "name": "China",
+        "resolutions": [
+          "512x512"
+        ],
+        "resolution_details": [
+          {
+            "resolution": "512x512",
+            "count": 315
+          }
+        ]
+      }
     ]
   },
   "annotation_schema": [
@@ -50,27 +64,58 @@
           "description": "CrackLS315 class: crack",
           "color": "#294F71",
           "canonical_name": "crack",
-          "instances": 940
+          "instances": 855
         }
       ]
     }
   ],
+  "class_taxonomy": {
+    "version": "road_damage_v2",
+    "classes": [
+      {
+        "canonical_name": "crack",
+        "display_name": "Crack",
+        "damage_family": "crack",
+        "damage_subtype": "generic",
+        "role": "damage_target",
+        "semantic_role": "damage",
+        "training_role": "target",
+        "status": "stable",
+        "is_damage_target": true,
+        "aliases": [
+          "crack",
+          "cracked"
+        ],
+        "source_labels": [
+          "crack"
+        ],
+        "taxonomy_source": "registry",
+        "taxonomy_unresolved": false,
+        "mapping_type": "codebook-based",
+        "mapping_confidence": "high"
+      }
+    ],
+    "damage_types": [
+      "crack"
+    ],
+    "unresolved_labels": []
+  },
   "statistics": {
     "n_images": 315,
-    "n_annotations": 940,
+    "n_annotations": 855,
     "n_images_with_annotations": 310,
-    "average_annotations_per_image": 2.984126984126984,
+    "average_annotations_per_image": 2.7142857142857144,
     "dataset_size": "98.80 MB",
     "dataset_size_bytes": 103595572,
     "dataset_file_count": 630,
     "image_format": "png_masks",
     "class_distribution": {
-      "crack": 940
+      "crack": 855
     },
     "split": {
       "data": {
         "n_images": 315,
-        "percentage": 1,
+        "percentage": 1.0,
         "n_images_with_annotations": 310,
         "annotation_coverage": 0.9841,
         "dataset_size": "98.80 MB",
@@ -152,36 +197,5 @@
     "article_title": "DeepCrack: Learning Hierarchical Convolutional Features for Crack Detection",
     "journal": "IEEE Transactions on Image Processing",
     "year": 2019
-  },
-  "class_taxonomy": {
-    "version": "road_damage_v2",
-    "classes": [
-      {
-        "canonical_name": "crack",
-        "display_name": "Crack",
-        "damage_family": "crack",
-        "damage_subtype": "generic",
-        "role": "damage_target",
-        "semantic_role": "damage",
-        "training_role": "target",
-        "status": "stable",
-        "is_damage_target": true,
-        "aliases": [
-          "crack",
-          "cracked"
-        ],
-        "source_labels": [
-          "crack"
-        ],
-        "taxonomy_source": "codebook",
-        "taxonomy_unresolved": false,
-        "mapping_type": "codebook-based",
-        "mapping_confidence": "high"
-      }
-    ],
-    "damage_types": [
-      "crack"
-    ],
-    "unresolved_labels": []
   }
 }
